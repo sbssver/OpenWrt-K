@@ -78,7 +78,7 @@ runs:
                   done
                 fi
               fi
-              git clone https://git.openwrt.org/openwrt/openwrt.git $GITHUB_WORKSPACE/openwrt
+              git clone https://github.com/openwrt/openwrt.git $GITHUB_WORKSPACE/openwrt
               cd $GITHUB_WORKSPACE/openwrt
               export OPENWRT_TAG_BRANCH="$(sed -n '/openwrt_tag\/branch/p' $GITHUB_WORKSPACE/config/$i/OpenWrt-K/compile.config | sed -e 's/.*=//')"
               git checkout $OPENWRT_TAG_BRANCH
